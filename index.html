@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food bol</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+  <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo1">🍽️ <span>Food bol</span></div>
+          <ul class="nav-links">
+            <li class="res "><a href="index.html"class="nav-link">Home</a></li>
+            <li class="res "><a href="menu.html" class="nav-link">Menu</a></li>
+            <li class="res "><a href="#location" class="nav-link">Location</a></li>
+            <li class="res "><a href="contact.html" class="btn1 nav-link">Contact Us</a></li>
+            <li class="menu" onclick="open_sidebar()">
+              <a
+                ><img
+                  src="./assets/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                  alt=""
+              /></a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="side_bar" id="sidebar">
+          <li class="close_side-bar" onclick="close_sidebar()">
+            <a
+              ><img
+                src="./assets/close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                alt=""
+            /></a>
+          </li>
+          <li ><a class="nav-link" href="index.html">Home</a></li>
+          <li ><a class="nav-link" href="menu.html">Menu</a></li>
+          <li ><a class="nav-link" href="#location">Location</a></li>
+          <li ><a class="nav-link btn1" href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </header>
+    <!-- Hero Section -->
+    <div class="hero-slider" id="heroSlider">
+      <div class="slide active">
+        <img
+          src="./assets/hero3.jpg"
+          alt="Restaurant interior"
+        />
+        <div class="slide-content">
+        </div>
+      </div>
+
+      <div class="slide">
+        <img
+          src="./assets/hero2.jpg"
+          alt="Chef's special dish"
+        />
+        <div class="slide-content">
+
+        </div>
+      </div>
+
+      <div class="slide">
+        <img
+          src="./assets/hero1.jpg"
+          alt="Outdoor seating area"
+        />
+        <div class="slide-content">
+
+        </div>
+      </div>
+
+      <div class="slider-arrows">
+        <div class="arrow prev-arrow">&#10094;</div>
+        <div class="arrow next-arrow">&#10095;</div>
+      </div>
+
+      <div class="slider-dots" id="sliderDots">
+        <div class="dot active" data-index="0"></div>
+        <div class="dot" data-index="1"></div>
+        <div class="dot" data-index="2"></div>
+      </div>
+    </div>
+    <main>
+      <section class="specialty">
+        <div class="section-title">
+          <h2 class="main-title">Culinary Masterpieces</h2>
+          <p class="subtitle">
+            Our team of chefs creates seasonal dishes with the
+            finest locally-sourced ingredients, bringing you unforgettable
+            flavors with every bite.
+          </p>
+        </div>
+
+        <div class="specialty-grid">
+          <div class="specialty-card">
+            <div class="card-image"><img src="./assets/dish1.jpg" alt=""></div>
+            <div class="card-content">
+              <h3 class="card-title">Chicken Biryani</h3>
+              <p class="card-description">
+                Delicious chicken biryani cooked with aromatic spices, tender meat, basmati rice, and herbs. A royal, flavorful dish loved by all.
+              </p>
+              <span class="price-tag">₹90</span>
+            </div>
+          </div>
+          
+
+          <div class="specialty-card">
+            <div class="card-image"><img src="./assets/dish2.jpg" alt=""></div>
+            <div class="card-content">
+              <h3 class="card-title">Chicken Kosha</h3>
+              <p class="card-description">
+                Succulent chicken simmered in a thick, spiced gravy with traditional Bengali flavors. Deep, rich, and absolutely satisfying.
+              </p>
+              <span class="price-tag">₹120</span>
+            </div>
+          </div>
+
+          <div class="specialty-card">
+            <div class="card-image"><img src="./assets/dish3.jpg" alt=""></div>
+            <div class="card-content">
+              <h3 class="card-title">Chilli Chicken</h3>
+              <p class="card-description">
+                Crispy fried chicken tossed in a spicy, tangy sauce with peppers and onions. A fiery Indo-Chinese favorite!
+              </p>
+              <span class="price-tag">₹120</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="ambiance">
+        <div class="section-title">
+          <h2 class="main-title">Immersive Atmosphere</h2>
+          <p class="subtitle">
+            Step into a world where culinary artistry meets sophisticated
+            ambiance, creating the perfect setting for an extraordinary dining
+            experience.
+          </p>
+        </div>
+
+        <div class="ambiance-content">
+          <div class="ambiance-text">
+            <h3>A Fusion of Art and Cuisine</h3>
+            <p>
+              Our restaurant is not just a place to dine—it's a sensory journey
+              designed to elevate your experience beyond the ordinary. With
+              carefully curated interiors, ambient lighting, and thoughtful
+              details, we've created a space where every moment becomes
+              memorable.
+            </p>
+            <p>
+              The minimalist elegance of our dining room provides the perfect
+              backdrop for our culinary creations, allowing the food to take
+              center stage while you enjoy the comfort of our carefully designed
+              space.
+            </p>
+            <p>
+              Every element—from the hand-selected furnishings to the
+              custom-designed tableware—has been chosen to complement the
+              culinary journey we invite you to embark on.
+            </p>
+          </div>
+
+          <div class="ambiance-gallery">
+            <div class="gallery-img"><img src="./assets/inside1.jpg" alt=""></div>
+            <div class="gallery-img"><img src="./assets/inside2.jpg" alt=""></div>
+            <div class="gallery-img"><img src="./assets/inside3.jpg" alt=""></div>
+            <div class="gallery-img"><img src="./assets/inside4.jpg" alt=""></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Added Testimonials Section -->
+      <section class="testimonials">
+        <div class="section-title">
+          <h2 class="main-title">Guest Experiences</h2>
+          <p class="subtitle">
+            Discover what our valued guests have to say about their exceptional
+            dining experiences at GUSTO.
+          </p>
+        </div>
+
+        <div class="testimonial-container">
+          <div class="testimonial-grid">
+            <div class="testimonial-card">
+              <div class="ratings">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-text">
+                "FOODBOL offers delicious food with great ambiance. <br>The service is quick, and the flavors are amazing.<br> Highly recommend their Biryani! Perfect spot for a cozy meal with friends or family."
+              </p>
+              <div class="testimonial-author">
+                <div class="author-info">
+                  <h4><a target="_blank" href="https://www.google.com/maps/place/FOODBOL/review/@23.527811,86.9326489,17z/data=!4m8!3m7!1s0x39f7032a600d2427:0x444a6dc2a5e25387!8m2!3d23.527811!4d86.9326489!9m1!1b1!16s%2Fg%2F11lzny4jvv?entry=ttu&g_ep=EgoyMDI1MDQwNy4wIKXMDSoASAFQAw%3D%3D">Avijit gorai</a></h4>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="ratings">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-text">
+                "Amazing experience... I couldn't imagine... Excellent cuisine, delicious foods, neat and clean arrangements, cordial behaviour of the staff, and above all cheap rate - these are USP of this restaurant... Come and enjoy your taste...
+
+                We enjoyed Biriyani... It was flavoured, delicious... Ah! I can feel the taste..."
+              </p>
+              <div class="testimonial-author">
+                <div class="author-info">
+                  <h4><a target="_blank" href="https://www.google.com/maps/place/FOODBOL/review/@23.527811,86.9326489,17z/data=!4m8!3m7!1s0x39f7032a600d2427:0x444a6dc2a5e25387!8m2!3d23.527811!4d86.9326489!9m1!1b1!16s%2Fg%2F11lzny4jvv?entry=ttu&g_ep=EgoyMDI1MDQwNy4wIKXMDSoASAFQAw%3D%3D">Brindaban Ghoshal</a></h4>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="ratings">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-text">
+                "FOODBOL provides a wonderful dining experience with a welcoming ambiance and excellent service. The menu offers a variety of flavorful dishes, all beautifully prepared. The atmosphere is perfect for a casual meal or a gathering with friends. Highly recommended for food lovers!"
+              </p>
+              <div class="testimonial-author">
+                <div class="author-info">
+                  <h4><a target="_blank" href="https://www.google.com/maps/place/FOODBOL/review/@23.527811,86.9326489,17z/data=!4m8!3m7!1s0x39f7032a600d2427:0x444a6dc2a5e25387!8m2!3d23.527811!4d86.9326489!9m1!1b1!16s%2Fg%2F11lzny4jvv?entry=ttu&g_ep=EgoyMDI1MDQwNy4wIKXMDSoASAFQAw%3D%3D">MOUSHAMI GORAI</a></h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="reservation">
+        <div class="section-title">
+          <h2 class="main-title">Reserve Your Experience</h2>
+          <p class="subtitle">
+            Join us for an unforgettable culinary journey. Reservations are
+            highly recommended to ensure we can provide you with the exceptional
+            service you deserve.
+          </p>
+        </div>
+
+        <div class="reservation-content">
+          <p>
+            We look forward to creating a memorable dining experience tailored
+            just for you. Let us know about any special requests or dietary
+            preferences when making your reservation.
+          </p>
+          <a href="contact.html" class="btn">Contact us</a>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="footer-container">
+          <div class="footer-top">
+              <div>
+                  <div class="restaurant-logo">FOODBOL</div>
+              </div>
+          </div>
+          
+          <div class="footer-content">
+              <div class="footer-section">
+                  <h3 class="footer-heading">Location</h3>
+                  <div class="contact-info">
+                      <strong>Address</strong>
+                      SALTORA, NEAR THE BDO OFFICE<br>
+                      BIDHAN UDYAN, BANKURA<br>
+                      WEST BENGAL, 722158
+                  </div>
+                  <div class="contact-info">
+                      <strong>Contact</strong>
+                      restaurantandcafefoodbal@gmail.com<br>
+                      (+91) 62941 70629 <br>
+                      (+91) 9832402253
+                  </div>
+              </div>
+              
+              <div class="footer-section">
+                  <h3 class="footer-heading">Opening Hours</h3>
+                  <ul class="hours-list">
+                      <li>
+                          <span class="day">Monday - Sunday</span>
+                          <span class="time">11:00AM - 11:00PM</span>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+          
+          <div class="social-wrapper">
+              <div class="social-links">
+                  <a href="https://www.instagram.com/food_bol_restaurant?utm_source=qr&igsh=OGcwYm1seXlnNnA1"><i class="fab fa-instagram"></i></a>
+                  <a href="https://www.facebook.com/share/1ADBnFJiCQ/"><i class="fab fa-facebook-f"></i></a>
+                  <a href="https://whatsapp.com/channel/0029Vb6fp310bIdwIihNOx1p"><i class="fab fa-whatsapp"></i></a>
+              </div>
+          </div>
+          
+          <div class="divider"></div>
+          
+          <div class="footer-bottom">
+              &copy; 2025 <span class="highlight">FOODBOL</span>. All rights reserved.
+          </div>
+      </div>
+  </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
