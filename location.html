@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Location</title>
+    <style>
+        .location-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+            background-color:#f5f5f5;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .section1-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+        
+        .section1-header::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: #f0c869;
+            margin: 1.5rem auto 0;
+        }
+        
+        .section1-header h2 {
+            font-size: 2.8rem;
+            color: #333;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .section1-header p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .location-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem;
+            justify-content: center;
+            align-items: stretch;
+        }
+        
+        .map-container {
+            flex: 1;
+            min-width: 300px;
+            height: 450px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+        
+        .map-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .info1-container {
+            flex: 1;
+            min-width: 300px;
+            padding: 2.5rem;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+        
+        .info1-container:hover {
+            transform: translateY(-5px);
+        }
+        
+        .info1-item {
+            margin-bottom: 2rem;
+            position: relative;
+            padding-left: 2.5rem;
+        }
+        
+        .info1-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .info1-icon {
+            position: absolute;
+            left: 0;
+            top: 0.25rem;
+            width: 1.8rem;
+            height: 1.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f0c869;
+            border-radius: 50%;
+            color: white;
+            font-size: 1rem;
+        }
+        
+        .info1-item h3 {
+            font-size: 1.4rem;
+            color: #333;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .info1-item p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.7;
+        }
+        
+        .hours1-list {
+            list-style: none;
+        }
+        
+        .hours1-list li {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.7rem;
+            padding-bottom: 0.7rem;
+            border-bottom: 1px dashed #eee;
+        }
+        
+        .hours1-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .hours1-list .day {
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .hours1-list .time {
+            color: #666;
+            font-weight: 500;
+        }
+        
+        .contact-links a {
+            color: #f0c869;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-links a:hover {
+            color: #feb47b;
+        }
+
+        /* Add subtle animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .info1-item {
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+        
+        .info1-item:nth-child(1) { animation-delay: 0.1s; }
+        .info1-item:nth-child(2) { animation-delay: 0.3s; }
+        .info1-item:nth-child(3) { animation-delay: 0.5s; }
+        .info1-item:nth-child(4) { animation-delay: 0.7s; }
+        
+        @media (max-width: 992px) {
+            .location-content {
+                flex-direction: column;
+            }
+            
+            .map-container {
+                width: 100%;
+                height: 350px;
+                margin-bottom: 1rem;
+            }
+            
+            .section1-header h2 {
+                font-size: 2.3rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .section1-header h2 {
+                font-size: 2rem;
+            }
+            
+            .section1-header p {
+                font-size: 1rem;
+            }
+            
+            .info1-item h3 {
+                font-size: 1.2rem;
+            }
+            
+            .info1-item p, .time, .day {
+                font-size: 0.95rem;
+            }
+            
+            .map-container {
+                height: 3500px;
+            }
+        }
+    </style>
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      />
+      <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <div class="container">
+          <nav>
+            <div class="logo1"><img src="./assets/logo.jpg" alt=""><span>Where Every Bite Scores a Goal!</span></div>
+            <ul class="nav-links">
+              <li class="res "><a href="index.html"class="nav-link">Home</a></li>
+              <li class="res "><a href="menu.html" class="nav-link">Menu</a></li>
+              <li class="res "><a href="location.html" class="nav-link">Location</a></li>
+              <li class="res "><a href="contact.html" class="btn1 nav-link">Contact Us</a></li>
+              <li class="menu" onclick="open_sidebar()">
+                <a
+                  ><img
+                    src="./assets/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                    alt=""
+                /></a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="side_bar" id="sidebar">
+            <li class="close_side-bar" onclick="close_sidebar()">
+              <a
+                ><img
+                  src="./assets/close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                  alt=""
+              /></a>
+            </li>
+            <li ><a class="nav-link" href="index.html">Home</a></li>
+            <li ><a class="nav-link" href="menu.html">Menu</a></li>
+            <li ><a class="nav-link" href="location.html">Location</a></li>
+            <li ><a class="nav-link btn1" href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </header>
+    <section class="location-section">
+        <div class="section1-header">
+            <h2>Find Us</h2>
+            <p>We're conveniently located in the heart of downtown. Come visit us and experience our exceptional cuisine and warm atmosphere.</p>
+        </div>
+        
+        <div class="location-content">
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3658.1304244483817!2d86.9326489!3d23.527811!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f7032a600d2427%3A0x444a6dc2a5e25387!2sFOODBOL!5e0!3m2!1sen!2sin!4v1744941960463!5m2!1sen!2sin" style="width: 100%; height: 100%; object-fit: cover; border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
+            </div>
+            
+            <div class="info1-container">
+                <div class="info1-item">
+                    <div class="info1-icon">📍</div>
+                    <h3>Address</h3>
+                    <p>SALTORA, NEAR THE BDO OFFICE<br>BIDHAN UDYAN, BANKURA<br>WEST BENGAL, 722158</p>
+                </div>
+                
+                <div class="info1-item">
+                    <div class="info1-icon">🚗</div>
+                    <h3>Parking</h3>
+                    <p>Free parking available in our private lot. Street parking also available nearby.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-top">
+                <div>
+                    <div class="restaurant-logo">FOODBOL</div>
+                </div>
+            </div>
+            
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-heading">Location</h3>
+                    <div class="contact-info">
+                        <strong>Address</strong>
+                        SALTORA, NEAR THE BDO OFFICE<br>
+                        BIDHAN UDYAN, BANKURA<br>
+                        WEST BENGAL, 722158
+                    </div>
+                    <div class="contact-info">
+                        <strong>Contact</strong>
+                        restaurantandcafefoodbal@gmail.com<br>
+                        (+91) 62941 70629 <br>
+                        (+91) 9832402253
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-heading">Opening Hours</h3>
+                    <ul class="hours-list">
+                        <li>
+                            <span class="day">Monday - Sunday</span>
+                            <span class="time">11:00AM - 11:00PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="social-wrapper">
+                <div class="social-links">
+                    <a href="https://www.instagram.com/food_bol_restaurant?utm_source=qr&igsh=OGcwYm1seXlnNnA1"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/share/1ADBnFJiCQ/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://whatsapp.com/channel/0029Vb6fp310bIdwIihNOx1p"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="footer-bottom">
+                &copy; 2025 <span class="highlight">FOODBOL</span>. All rights reserved.
+            </div>
+        </div>
+    </footer> 
+    <script src="script.js"></script>
+</body>
+</html>

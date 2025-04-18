@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo1"><img src="./assets/logo.jpg" alt=""><span>Where Every Bite Scores a Goal!</span></div>
+        <ul class="nav-links">
+          <li class="res "><a href="index.html"class="nav-link">Home</a></li>
+          <li class="res "><a href="menu.html" class="nav-link">Menu</a></li>
+          <li class="res "><a href="location.html" class="nav-link">Location</a></li>
+          <li class="res "><a href="contact.html" class="btn1 nav-link">Contact Us</a></li>
+          <li class="menu" onclick="open_sidebar()">
+            <a
+              ><img
+                src="./assets/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                alt=""
+            /></a>
+          </li>
+        </ul>
+      </nav>
+      <ul class="side_bar" id="sidebar">
+        <li class="close_side-bar" onclick="close_sidebar()">
+          <a
+            ><img
+              src="./assets/close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+              alt=""
+          /></a>
+        </li>
+        <li ><a class="nav-link" href="index.html">Home</a></li>
+        <li ><a class="nav-link" href="menu.html">Menu</a></li>
+        <li ><a class="nav-link" href="location.html">Location</a></li>
+        <li ><a class="nav-link btn1" href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </header>
+
+      <section class="menu-section">
+        <div class="menu-header">
+          <h2>Our Menu</h2>
+          <p>
+            Discover our carefully crafted dishes made with fresh, locally sourced
+            ingredients
+          </p>
+        </div>
+
+        <div class="mini-combo-section">
+          <h4 class="mini-combo-title">Combo Offers</h4>
+          
+          <div class="mini-combo-container">
+              <div class="mini-combo">
+                  <div class="mini-combo-label">Combo 1</div>
+                  <div class="mini-combo-content">Biryani + Chicken Curry (2pcs)</div>
+                  <div class="mini-combo-price">₹149</div>
+              </div>
+              
+              <div class="mini-combo">
+                  <div class="mini-combo-label">Combo 2</div>
+                  <div class="mini-combo-content">Fried Rice + Chilli Chicken (2pcs)</div>
+                  <div class="mini-combo-price">₹159</div>
+              </div>
+              
+              <div class="mini-combo">
+                  <div class="mini-combo-label">Combo 3</div>
+                  <div class="mini-combo-content">Fried Rice + Chicken Manchurian (2pcs)</div>
+                  <div class="mini-combo-price">₹169</div>
+              </div>
+              
+              <div class="mini-combo">
+                  <div class="mini-combo-label">Combo 4</div>
+                  <div class="mini-combo-content">Polau + Paneer Butter Masala (4pcs)</div>
+                  <div class="mini-combo-price">₹189</div>
+              </div>
+          </div>
+      </div>
+  
+        <div class="menu-categories">
+          <button class="category-btn active" data-category="all">All</button>
+          <button class="category-btn" data-category="Starters">Starters</button>
+          <button class="category-btn" data-category="Mainindian">
+            Main courses(Rice)
+          </button>
+          <button class="category-btn" data-category="mainincha">
+            Main Courses(indian & Chinese)
+          </button>
+          <button class="category-btn" data-category="Special_Dishes">
+            Special Dishes
+          </button>
+          <button class="category-btn" data-category="Beaditems">Bread & Kulcha</button>
+          <button class="category-btn" data-category="Beverages">Beverages</button>
+        </div>
+  
+        <div class="menu-items">
+
+          <!-- Menu Item 9 -->
+          <div class="menu-item" data-categories="mainincha Starters">
+            <div class="menu-item-image">
+              <img src="./assets/Dishes/menu3.jpg" alt="Chicken Lollipop" />
+            </div>
+            <div class="menu-item-info">
+              <div class="menu-item-title">
+                <h3>Chicken Lollipop</h3>
+                <span class="menu-item-price">(6 pcs) ₹180</span>
+              </div>
+              <!-- <p class="menu-item-desc">
+                Prime beef tenderloin cooked to your preference, served with
+                garlic mashed potatoes and seasonal vegetables.
+              </p> -->
+            </div>
+          </div>
+
+
+<!-- Menu Item 21 -->
+<div class="menu-item" data-categories="Starters">
+  <div class="menu-item-image">
+    <img src="./assets/Dishes/menu12.jpg" alt="Chicken Spring Roll" />
+  </div>
+  <div class="menu-item-info">
+    <div class="menu-item-title">
+      <h3>Chicken Spring Roll</h3>
+      <span class="menu-item-price">(4 pcs) ₹100</span>
+    </div>
+    <!-- <p class="menu-item-desc">
+      Tender calamari lightly breaded and fried to golden perfection,
+      served with house-made aioli and lemon wedges.
+    </p> -->
+  </div>
+</div>
+
+
+        <!-- Menu Item 22 -->
+        <div class="menu-item" data-categories="Starters">
+            <div class="menu-item-image">
+              <img src="./assets/Dishes/menu11.jpg" alt="Chicken Pakora" />
+            </div>
+            <div class="menu-item-info">
+              <div class="menu-item-title">
+                <h3>Chicken Pakora</h3>
+                <span class="menu-item-price">(8 pcs) ₹100</span>
+              </div>
+              <!-- <p class="menu-item-desc">
+                Tender calamari lightly breaded and fried to golden perfection,
+                served with house-made aioli and lemon wedges.
+              </p> -->
+            </div>
+          </div>
+
+
+                          <!-- Menu Item 23 -->
+        <div class="menu-item" data-categories="Starters">
+            <div class="menu-item-image">
+              <img src="./assets/Dishes/menu13.jpg" alt="Veg Pakora" />
+            </div>
+            <div class="menu-item-info">
+              <div class="menu-item-title">
+                <h3>Veg Pakora</h3>
+                <span class="menu-item-price">(8 pcs) ₹80</span>
+              </div>
+              <!-- <p class="menu-item-desc">
+                Tender calamari lightly breaded and fried to golden perfection,
+                served with house-made aioli and lemon wedges.
+              </p> -->
+            </div>
+          </div>
+
+                      <!-- Menu Item 24 -->
+        <div class="menu-item" data-categories="Starters">
+            <div class="menu-item-image">
+              <img src="./assets/Dishes/menu14.jpg" alt="Paneer Pakora" />
+            </div>
+            <div class="menu-item-info">
+              <div class="menu-item-title">
+                <h3>Paneer Pakora</h3>
+                <span class="menu-item-price">(8 pcs) ₹120</span>
+              </div>
+              <!-- <p class="menu-item-desc">
+                Tender calamari lightly breaded and fried to golden perfection,
+                served with house-made aioli and lemon wedges.
+              </p> -->
+            </div>
+          </div>
+
+          <!-- Menu Item 1 -->
+          <div class="menu-item" data-categories="Mainindian">
+            <div class="menu-item-image">
+              <img src="./assets/dish1.jpg" alt="Chicken Biryani" />
+            </div>
+            <div class="menu-item-info">
+              <div class="menu-item-title">
+                <h3>Chicken Biryani</h3>
+                <span class="menu-item-price">₹99</span>
+              </div>
+              <!-- <p class="menu-item-desc">
+                Delicious chicken biryani cooked with aromatic spices, tender
+                meat, basmati rice, and herbs. A royal, flavorful dish loved by
+                all. -->
+              </p>
+            </div>
+          </div>
+  
+          <!-- Menu Item 2 -->
+          <div class="menu-item" data-categories="Mainindian">
+            <div class="menu-item-image">
+              <img src="./assets/Dishes/menu8.jpg" alt="Plain Rice" />
+            </div>
+            <div class="menu-item-info">
+              <div class="menu-item-title">
+                <h3>Plain Rice</h3>
+                <span class="menu-item-price">₹45</span>
+              </div>
+              <!-- <p class="menu-item-desc">
+                Handmade fettuccine tossed in a creamy truffle sauce with wild
+                mushrooms and parmesan cheese.
+              </p> -->
+            </div>
+          </div>
+  
+          <!-- Menu Item 3 -->
+          <div class="menu-item" data-categories="Mainindian">
+            <div class="menu-item-image">
+              <img src="./assets/Dishes/menu9.jpg" alt="Veg Thali" />
+            </div>
+            <div class="menu-item-info">
+              <div class="menu-item-title">
+                <h3>Veg Thali</h3>
+                <span class="menu-item-price">₹50</span>
+              </div>
+              <!-- <p class="menu-item-desc">
+                Fresh Atlantic salmon grilled to perfection, served with roasted
+                vegetables and herb-infused quinoa.
+              </p> -->
+            </div>
+          </div>
+  
+          <!-- Menu Item 4 -->
+          <div class="menu-item" data-categories="Mainindian">
+            <div class="menu-item-image">
+              <img src="./assets/Dishes/menu40.jpg" alt="Nonveg Thali" />
+            </div>
+            <div class="menu-item-info">
+              <div class="menu-item-title">
+                <h3>Nonveg thali(Fish/Chicken)</h3>
+                <span class="menu-item-price">₹80</span>
+              </div>
+              <!-- <p class="menu-item-desc">
+                Fresh Atlantic salmon grilled to perfection, served with roasted
+                vegetables and herb-infused quinoa.
+              </p> -->
+            </div>
+          </div>
+  
+          <!-- Menu Item 5 -->
+          <div class="menu-item" data-categories="Mainindian">
+            <div class="menu-item-image">
+              <img src="./assets/Dishes/menu1.jpg" alt="Kashmiri Polau" />
+            </div>
+            <div class="menu-item-info">
+              <div class="menu-item-title">
+                <h3>Kashmiri Polau</h3>
+                <span class="menu-item-price">₹150</span>
+              </div>
+              <!-- <p class="menu-item-desc">
+                Fresh Atlantic salmon grilled to perfection, served with roasted
+                vegetables and herb-infused quinoa.
+              </p> -->
+            </div>
+          </div>
+  
+          <!-- Menu Item 6 -->
+          <div class="menu-item" data-categories="Mainindian">
+            <div class="menu-item-image">
+              <img src="./assets/Dishes/menu20.jpg" alt="Polau" />
+            </div>
+            <div class="menu-item-info">
+              <div class="menu-item-title">
+                <h3>Polau</h3>
+                <span class="menu-item-price">₹100</span>
+              </div>
+              <!-- <p class="menu-item-desc">
+                Fresh Atlantic salmon grilled to perfection, served with roasted
+                vegetables and herb-infused quinoa.
+              </p> -->
+            </div>
+          </div>
+  
+          <!-- Menu Item 7 -->
+          <div class="menu-item" data-categories="Mainindian">
+            <div class="menu-item-image">
+              <img src="./assets/Dishes/menu24.jpg" alt="Fried Rice" />
+            </div>
+            <div class="menu-item-info">
+              <div class="menu-item-title">
+                <h3>Fried Rice</h3>
+                <span class="menu-item-price">₹100</span>
+              </div>
+              <!-- <p class="menu-item-desc">
+                Fresh Atlantic salmon grilled to perfection, served with roasted
+                vegetables and herb-infused quinoa.
+              </p> -->
+            </div>
+          </div>
+
+          <!-- Menu Item 8 -->
+          <div class="menu-item" data-categories="Mainindian">
+            <div class="menu-item-image">
+              <img src="./assets/Dishes/menu25.jpg" alt="Chicken Fried Rice" />
+            </div>
+            <div class="menu-item-info">
+              <div class="menu-item-title">
+                <h3>Chicken Fried Rice</h3>
+                <span class="menu-item-price">₹130</span>
+              </div>
+              <!-- <p class="menu-item-desc">
+                Fresh Atlantic salmon grilled to perfection, served with roasted
+                vegetables and herb-infused quinoa.
+              </p> -->
+            </div>
+          </div>
+
+
+          <!-- Menu Item 9 -->
+          <div class="menu-item" data-categories="Mainindian">
+            <div class="menu-item-image">
+              <img src="./assets/Dishes/menu17.jpg" alt="Mixed Fried Rice" />
+            </div>
+            <div class="menu-item-info">
+              <div class="menu-item-title">
+                <h3>Mixed Fried Rice</h3>
+                <span class="menu-item-price">₹160</span>
+              </div>
+              <!-- <p class="menu-item-desc">
+                Fresh Atlantic salmon grilled to perfection, served with roasted
+                vegetables and herb-infused quinoa.
+              </p> -->
+            </div>
+          </div>
+  
+          <!-- Menu Item 8 -->
+          <div class="menu-item" data-categories="mainincha">
+            <div class="menu-item-image">
+              <img src="./assets/Dishes/menu2.jpg" alt="Chicken Reshmi Masala" />
+            </div>
+            <div class="menu-item-info">
+              <div class="menu-item-title">
+                <h3>Chicken Reshmi Masala</h3>
+                <span class="menu-item-price">(1 Plate) ₹170</span>
+              </div>
+              <!-- <p class="menu-item-desc">
+                Prime beef tenderloin cooked to your preference, served with
+                garlic mashed potatoes and seasonal vegetables.
+              </p> -->
+            </div>
+          </div>
+    
+          <!--Menu item 10-->
+          <div class="menu-item" data-categories="mainincha">
+              <div class="menu-item-image">
+                <img src="./assets/Dishes/menu35.jpg" alt="Chicken Masala" />
+              </div>
+              <div class="menu-item-info">
+                <div class="menu-item-title">
+                  <h3>Chicken Masala</h3>
+                  <span class="menu-item-price">(1 Plate) ₹150</span>
+                </div>
+                <!-- <p class="menu-item-desc">
+                  Prime beef tenderloin cooked to your preference, served with
+                  garlic mashed potatoes and seasonal vegetables.
+                </p> -->
+              </div>
+            </div>
+  
+            <!-- Menu Item 11 -->
+          <div class="menu-item" data-categories="mainincha">
+              <div class="menu-item-image">
+                <img src="./assets/Dishes/menu4.jpg" alt="Chicken Bharta" />
+              </div>
+              <div class="menu-item-info">
+                <div class="menu-item-title">
+                  <h3>Chicken Bharta</h3>
+                  <span class="menu-item-price">(1 Plate) ₹150</span>
+                </div>
+                <!-- <p class="menu-item-desc">
+                  Prime beef tenderloin cooked to your preference, served with
+                  garlic mashed potatoes and seasonal vegetables.
+                </p> -->
+              </div>
+            </div>
+  
+          <!-- Menu Item 12 -->
+          <div class="menu-item" data-categories="mainincha">
+              <div class="menu-item-image">
+                <img src="./assets/Dishes/menu5.jpg" alt="Chicken Do Pyaza" />
+              </div>
+              <div class="menu-item-info">
+                <div class="menu-item-title">
+                  <h3>Chicken Do Pyaza</h3>
+                  <span class="menu-item-price">(1 Plate) ₹140</span>
+                </div>
+                <!-- <p class="menu-item-desc">
+                  Prime beef tenderloin cooked to your preference, served with
+                  garlic mashed potatoes and seasonal vegetables.
+                </p> -->
+              </div>
+            </div>
+  
+  
+                    <!-- Menu Item 13 -->
+          <div class="menu-item" data-categories="mainincha">
+              <div class="menu-item-image">
+                <img src="./assets/Dishes/menu10.jpg" alt="Mashroom Masala" />
+              </div>
+              <div class="menu-item-info">
+                <div class="menu-item-title">
+                  <h3>Mashroom Masala</h3>
+                  <span class="menu-item-price">(1 Plate) ₹180</span>
+                </div>
+                <!-- <p class="menu-item-desc">
+                  Prime beef tenderloin cooked to your preference, served with
+                  garlic mashed potatoes and seasonal vegetables.
+                </p> -->
+              </div>
+            </div>
+  
+          <!-- Menu Item 14 -->
+          <div class="menu-item" data-categories="mainincha">
+              <div class="menu-item-image">
+                <img src="./assets/Dishes/menu32.jpg" alt="Mutton Do-payaza" />
+              </div>
+              <div class="menu-item-info">
+                <div class="menu-item-title">
+                  <h3>Mutton Do-payaza</h3>
+                  <span class="menu-item-price">(4 pcs) ₹280</span>
+                </div>
+                <!-- <p class="menu-item-desc">
+                  Prime beef tenderloin cooked to your preference, served with
+                  garlic mashed potatoes and seasonal vegetables.
+                </p> -->
+              </div>
+            </div>
+  
+  
+                    <!-- Menu Item 15 -->
+          <div class="menu-item" data-categories="mainincha">
+              <div class="menu-item-image">
+                <img src="./assets/Dishes/menu33.jpg" alt="Paneer Satay" />
+              </div>
+              <div class="menu-item-info">
+                <div class="menu-item-title">
+                  <h3>Paneer Satay</h3>
+                  <span class="menu-item-price">(1 Plate,5 pcs) ₹150</span>
+                </div>
+                <!-- <p class="menu-item-desc">
+                  Prime beef tenderloin cooked to your preference, served with
+                  garlic mashed potatoes and seasonal vegetables.
+                </p> -->
+              </div>
+            </div>
+  
+  
+                    <!-- Menu Item 16 -->
+          <div class="menu-item" data-categories="mainincha">
+              <div class="menu-item-image">
+                <img src="./assets/Dishes/menu6.jpg" alt="Paneer Bharta" />
+              </div>
+              <div class="menu-item-info">
+                <div class="menu-item-title">
+                  <h3>Paneer Bharta</h3>
+                  <span class="menu-item-price">(1 Plate) ₹160</span>
+                </div>
+                <!-- <p class="menu-item-desc">
+                  Prime beef tenderloin cooked to your preference, served with
+                  garlic mashed potatoes and seasonal vegetables.
+                </p> -->
+              </div>
+            </div>
+  
+                    <!-- Menu Item 17 -->
+          <div class="menu-item" data-categories="mainincha">
+              <div class="menu-item-image">
+                <img src="./assets/Dishes/menu34.jpg" alt="Garlic Chicken" />
+              </div>
+              <div class="menu-item-info">
+                <div class="menu-item-title">
+                  <h3>Garlic Chicken</h3>
+                  <span class="menu-item-price">(1 Plate,5 pcs) ₹150</span>
+                </div>
+                <!-- <p class="menu-item-desc">
+                  Prime beef tenderloin cooked to your preference, served with
+                  garlic mashed potatoes and seasonal vegetables.
+                </p> -->
+              </div>
+            </div>
+  
+  
+                    <!-- Menu Item 18 -->
+          <div class="menu-item" data-categories="mainincha">
+              <div class="menu-item-image">
+                <img src="./assets/Dishes/menu15.jpg" alt="Paneer Butter Masala" />
+              </div>
+              <div class="menu-item-info">
+                <div class="menu-item-title">
+                  <h3>Paneer Butter Masala</h3>
+                  <span class="menu-item-price">(1 Plate) ₹120</span>
+                </div>
+                <!-- <p class="menu-item-desc">
+                  Prime beef tenderloin cooked to your preference, served with
+                  garlic mashed potatoes and seasonal vegetables.
+                </p> -->
+              </div>
+            </div>
+  
+                    <!-- Menu Item 19 -->
+          <div class="menu-item" data-categories="mainincha">
+              <div class="menu-item-image">
+                <img src="./assets/Dishes/menu16.jpg" alt="Paneer Do Pyaza" />
+              </div>
+              <div class="menu-item-info">
+                <div class="menu-item-title">
+                  <h3>Paneer Do Pyaza</h3>
+                  <span class="menu-item-price">(1 Plate) ₹180</span>
+                </div>
+                <!-- <p class="menu-item-desc">
+                  Prime beef tenderloin cooked to your preference, served with
+                  garlic mashed potatoes and seasonal vegetables.
+                </p> -->
+              </div>
+            </div>
+  
+  
+                    <!-- Menu Item 20 -->
+          <div class="menu-item" data-categories="mainincha">
+              <div class="menu-item-image">
+                <img src="./assets/Dishes/menu7.jpg" alt="Mashroom Chili" />
+              </div>
+              <div class="menu-item-info">
+                <div class="menu-item-title">
+                  <h3>Mashroom Chili</h3>
+                  <span class="menu-item-price">(1 Plate) ₹180</span>
+                </div>
+                <!-- <p class="menu-item-desc">
+                  Prime beef tenderloin cooked to your preference, served with
+                  garlic mashed potatoes and seasonal vegetables.
+                </p> -->
+              </div>
+            </div>
+  
+  
+                  <!-- Menu Item 29 -->
+                  <div class="menu-item" data-categories="Special_Dishes">
+                      <div class="menu-item-image">
+                        <img src="./assets/Dishes/menu29.jpg" alt="Veg Manchurian" />
+                      </div>
+                      <div class="menu-item-info">
+                        <div class="menu-item-title">
+                          <h3>Veg Manchurian</h3>
+                          <span class="menu-item-price">(4 pcs) ₹180</span>
+                        </div>
+                        <!-- <p class="menu-item-desc">
+                          Warm chocolate cake with a molten center, served with vanilla bean
+                          ice cream and fresh berries.
+                        </p> -->
+                      </div>
+                    </div>
+          
+                  <!-- Menu Item 29 -->
+                  <div class="menu-item" data-categories="Special_Dishes">
+                      <div class="menu-item-image">
+                        <img src="./assets/Dishes/menu27.jpg" alt="Chicken Manchurian" />
+                      </div>
+                      <div class="menu-item-info">
+                        <div class="menu-item-title">
+                          <h3>Chicken Manchurian</h3>
+                          <span class="menu-item-price">(6 pcs) ₹180</span>
+                        </div>
+                        <!-- <p class="menu-item-desc">
+                          Warm chocolate cake with a molten center, served with vanilla bean
+                          ice cream and fresh berries.
+                        </p> -->
+                      </div>
+                    </div>
+  
+                  <!-- Menu Item 29 -->
+                  <div class="menu-item" data-categories="Special_Dishes">
+                      <div class="menu-item-image">
+                        <img src="./assets/Dishes/menu28.jpg" alt="Paneer Manchurian" />
+                      </div>
+                      <div class="menu-item-info">
+                        <div class="menu-item-title">
+                          <h3>Paneer Manchurian</h3>
+                          <span class="menu-item-price">(6 pcs) ₹180</span>
+                        </div>
+                        <!-- <p class="menu-item-desc">
+                          Warm chocolate cake with a molten center, served with vanilla bean
+                          ice cream and fresh berries.
+                        </p> -->
+                      </div>
+                    </div>
+
+
+
+
+
+                    <div class="menu-item" data-categories="Beaditems">
+                      <div class="menu-item-image">
+                        <img src="./assets/Dishes/menu38.jpg" alt="Ruti" />
+                      </div>
+                      <div class="menu-item-info">
+                        <div class="menu-item-title">
+                          <h3>Ruti</h3>
+                          <span class="menu-item-price">(1 pcs) ₹5</span>
+                        </div>
+                        <!-- <p class="menu-item-desc">
+                          Warm chocolate cake with a molten center, served with vanilla bean
+                          ice cream and fresh berries.
+                        </p> -->
+                      </div>
+                    </div>
+
+                    <div class="menu-item" data-categories="Beaditems">
+                      <div class="menu-item-image">
+                        <img src="./assets/Dishes/menu37.jpg" alt="Butter Ruti" />
+                      </div>
+                      <div class="menu-item-info">
+                        <div class="menu-item-title">
+                          <h3>Butter Ruti</h3>
+                          <span class="menu-item-price">(1 pcs) ₹10</span>
+                        </div>
+                        <!-- <p class="menu-item-desc">
+                          Warm chocolate cake with a molten center, served with vanilla bean
+                          ice cream and fresh berries.
+                        </p> -->
+                      </div>
+                    </div>
+
+                    <div class="menu-item" data-categories="Beaditems">
+                      <div class="menu-item-image">
+                        <img src="./assets/Dishes/menu22.jpg" alt="Naan" />
+                      </div>
+                      <div class="menu-item-info">
+                        <div class="menu-item-title">
+                          <h3>Naan</h3>
+                          <span class="menu-item-price">(1 pcs) ₹40</span>
+                        </div>
+                        <!-- <p class="menu-item-desc">
+                          Warm chocolate cake with a molten center, served with vanilla bean
+                          ice cream and fresh berries.
+                        </p> -->
+                      </div>
+                    </div>
+
+                    <div class="menu-item" data-categories="Beaditems">
+                      <div class="menu-item-image">
+                        <img src="./assets/Dishes/menu21.jpg" alt="Paneer Kulcha" />
+                      </div>
+                      <div class="menu-item-info">
+                        <div class="menu-item-title">
+                          <h3>Paneer Kulcha</h3>
+                          <span class="menu-item-price">(1 pcs) ₹70</span>
+                        </div>
+                        <!-- <p class="menu-item-desc">
+                          Warm chocolate cake with a molten center, served with vanilla bean
+                          ice cream and fresh berries.
+                        </p> -->
+                      </div>
+                    </div>
+
+                    <div class="menu-item" data-categories="Beaditems">
+                      <div class="menu-item-image">
+                        <img src="./assets/Dishes/menu23.jpg" alt="Masala Kulcha" />
+                      </div>
+                      <div class="menu-item-info">
+                        <div class="menu-item-title">
+                          <h3>Masala Kulcha</h3>
+                          <span class="menu-item-price">(1 pcs) ₹60</span>
+                        </div>
+                        <!-- <p class="menu-item-desc">
+                          Warm chocolate cake with a molten center, served with vanilla bean
+                          ice cream and fresh berries.
+                        </p> -->
+                      </div>
+                    </div>
+
+
+
+
+                    <div class="menu-item" data-categories="Beverages">
+                      <div class="menu-item-image">
+                        <img src="./assets/Dishes/menu30.jpg" alt="Tea" />
+                      </div>
+                      <div class="menu-item-info">
+                        <div class="menu-item-title">
+                          <h3>Tea</h3>
+                          <span class="menu-item-price">₹10</span>
+                        </div>
+                        <!-- <p class="menu-item-desc">
+                          Warm chocolate cake with a molten center, served with vanilla bean
+                          ice cream and fresh berries.
+                        </p> -->
+                      </div>
+                    </div>
+            
+            
+                            <!-- Menu Item 26 -->
+                            <div class="menu-item" data-categories="Beverages">
+                                <div class="menu-item-image">
+                                  <img src="./assets/Dishes/menu31.jpg" alt="Coffee" />
+                                </div>
+                                <div class="menu-item-info">
+                                  <div class="menu-item-title">
+                                    <h3>Coffee</h3>
+                                    <span class="menu-item-price">₹20</span>
+                                  </div>
+                                  <!-- <p class="menu-item-desc">
+                                    Warm chocolate cake with a molten center, served with vanilla bean
+                                    ice cream and fresh berries.
+                                  </p> -->
+                                </div>
+                              </div>
+            
+            
+                            <!-- Menu Item 27 -->
+                            <div class="menu-item" data-categories="Beverages">
+                                <div class="menu-item-image">
+                                  <img src="./assets/Dishes/menu39.jpg" alt="Cold Drinks" />
+                                </div>
+                                <div class="menu-item-info">
+                                  <div class="menu-item-title">
+                                    <h3>Cold Drinks</h3>
+                                    <span class="menu-item-price">(Glass Coke) ₹30</span>
+                                  </div>
+                                  <!-- <p class="menu-item-desc">
+                                    Warm chocolate cake with a molten center, served with vanilla bean
+                                    ice cream and fresh berries.
+                                  </p> -->
+                                </div>
+                              </div>
+            
+            
+                            <!-- Menu Item 28 -->
+                            <div class="menu-item" data-categories="Beverages">
+                                <div class="menu-item-image">
+                                  <img src="./assets/Dishes/menu19.jpg" alt="Masala Cold Drinks" />
+                                </div>
+                                <div class="menu-item-info">
+                                  <div class="menu-item-title">
+                                    <h3>Masala Cold Drinks</h3>
+                                    <span class="menu-item-price">(Glass) ₹50</span>
+                                  </div>
+                                  <!-- <p class="menu-item-desc">
+                                    Warm chocolate cake with a molten center, served with vanilla bean
+                                    ice cream and fresh berries.
+                                  </p> -->
+                                </div>
+                              </div>
+            
+            
+                            <!-- Menu Item 29 -->
+                            <div class="menu-item" data-categories="Beverages">
+                                <div class="menu-item-image">
+                                  <img src="./assets/Dishes/menu36.jpg" alt="Water" />
+                                </div>
+                                <div class="menu-item-info">
+                                  <div class="menu-item-title">
+                                    <h3>Water</h3>
+                                    <span class="menu-item-price">(1L) ₹20</span>
+                                  </div>
+                                  <!-- <p class="menu-item-desc">
+                                    Warm chocolate cake with a molten center, served with vanilla bean
+                                    ice cream and fresh berries.
+                                  </p> -->
+                                </div>
+                              </div>
+        </div>
+      </section>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-top">
+                <div>
+                    <div class="restaurant-logo">FOODBOL</div>
+                </div>
+            </div>
+            
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-heading">Location</h3>
+                    <div class="contact-info">
+                        <strong>Address</strong>
+                        SALTORA, NEAR THE BDO OFFICE<br>
+                        BIDHAN UDYAN, BANKURA<br>
+                        WEST BENGAL, 722158
+                    </div>
+                    <div class="contact-info">
+                        <strong>Contact</strong>
+                        restaurantandcafefoodbal@gmail.com<br>
+                        (+91) 62941 70629 <br>
+                        (+91) 9832402253
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-heading">Opening Hours</h3>
+                    <ul class="hours-list">
+                        <li>
+                            <span class="day">Monday - Sunday</span>
+                            <span class="time">11:00AM - 11:00PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="social-wrapper">
+                <div class="social-links">
+                    <a href="https://www.instagram.com/food_bol_restaurant?utm_source=qr&igsh=OGcwYm1seXlnNnA1"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/share/1ADBnFJiCQ/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://whatsapp.com/channel/0029Vb6fp310bIdwIihNOx1p"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="footer-bottom">
+                &copy; 2025 <span class="highlight">FOODBOL</span>. All rights reserved.
+            </div>
+        </div>
+    </footer>
+<script src="menu.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
